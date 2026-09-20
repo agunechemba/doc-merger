@@ -1,8 +1,11 @@
+// sw.js
 const CACHE_NAME = 'doc-merger-v1';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
-  './manifest.json'
+  './manifest.json',
+  './styles.css',
+  './app.js'
 ];
 
 // Install Service Worker and cache essential structural assets
