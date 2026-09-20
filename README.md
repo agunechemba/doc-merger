@@ -1,24 +1,32 @@
-# Doc Merger: Batch Generator 🚀
+# Doc Merger: Merge Spreadsheet Data into a Single Document
 
-An elegant, client-side web application designed to parse rows from a Google Sheet and dynamically generate individual, perfectly styled Google Documents based on a master template. 
+## Step 1: Prepare Your Google Sheet
+- **Row 1:** Column titles (e.g., `Student Name`, `Math Score`).
+- **Rows below:** One row per entry.
 
-By isolating each row into its own file, this tool completely bypasses Google Docs REST API formatting limitations—guaranteeing **100% preservation** of your template's layout, custom fonts, tables, cell borders, alignment, and background colors.
+## Step 2: Set Up Your Google Doc Template
+- Design your document in Google Docs (logos, fonts, tables, colors, etc.).
+- Insert placeholders using the exact column headers wrapped in double angle brackets:
+  - `<<Math Score>>`, `<<Student Name>>`
+- ⚠️ Placeholders are **case-sensitive**.
 
----
+## Step 3: Run a Generation Batch
+1. Open the [Doc-Merger](https://agunechemba.name.ng/doc-merger/) app in your browser.
+2. Paste your **Google Sheet URL** into the first field.
+3. Paste your **Google Doc Template URL** into the second field.
 
-## ✨ Features
+## Step 4: Authorize and Execute
+- Click **Sign in & Execute Generation**.
+- Grant Google OAuth permissions when prompted.
+- Watch the status box for real-time progress.
+- When done, click **Open Output Folder** to access your generated documents.
 
-*   **Pixel-Perfect Formatting:** Zero style degradation. Tables, borders, fills, and margins remain exactly as designed in your template.
-*   **Automatic Organization:** Every execution dynamically creates a uniquely timestamped destination folder in your Google Drive to hold the generated files.
-*   **Real-time Progress Tracker:** Watch the application securely initialize the OAuth handshake, read the sheet arrays, and process each row sequentially.
-*   **Built with Modern Tech:** Styled with Tailwind CSS, built with vanilla JavaScript, and powered securely by the official Google Identity Services (GSI) Client Library.
+## 🔒 Data Privacy
+Doc Merger runs entirely in your browser. Your data is never sent to third-party servers — everything stays within your Google account.
 
----
+## 🚀 Launch
+[Doc-Merger](https://agunechemba.name.ng/doc-merger/)
 
-## 📋 How It Works
+Happy automating!
 
-1.  **Template Injection:** The script uses your original Google Doc template as a structural baseline.
-2.  **Isolated Cloning:** For every row in your spreadsheet, the tool makes an exact clone of the template directly inside a new batch output folder.
-3.  **In-Place Text Swapping:** It uses the cloud-native `replaceAllText` method to instantly swap markers (e.g., `<<Student_Name>>`) with row data without touching the table cells' structural styling properties.
-
----
+*Questions or feature requests? Email: mr.agunechemba@gmail.com*
